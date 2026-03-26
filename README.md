@@ -1,25 +1,50 @@
-# Project
+Sistema de Inventario
+Aplicación de consola en Python para gestionar un inventario de productos. Permite agregar, buscar, actualizar y eliminar productos, calcular estadísticas, y guardar o cargar datos en formato CSV.
 
-# Sistema de Gestión de Inventario - Semana 3
+Requisitos
 
-Este es un proyecto de consola desarrollado en Python para la gestión de productos, precios y stock. Permite realizar operaciones CRUD, calcular estadísticas y persistir datos en archivos CSV.
+Python 3.x
+No requiere librerías externas
 
-## 🚀 Funcionalidades
-*   **Gestión de Productos:** Agregar, buscar, actualizar y eliminar.
-*   **Validación Robusta:** Control de errores en entradas numéricas y prevención de valores negativos.
-*   **Estadísticas:** Cálculo de unidades totales, valor del inventario, producto más caro y mayor stock.
-*   **Persistencia:** Guardado y carga de datos mediante archivos CSV con manejo de excepciones.
-*   **Seguridad de Salida:** Avisa si hay cambios sin guardar antes de cerrar el programa.
 
-## 📂 Estructura del Proyecto
-*   `app.py`: Interfaz de usuario y menú principal.
-*   `servicios.py`: Lógica de negocio y manipulación del inventario.
-*   `archivos.py`: Manejo de lectura y escritura de archivos CSV.
-*   `inventario.csv`: Archivo de datos (se genera automáticamente).
+Estructura del proyecto
+proyecto/
+├── app.py          # Menú principal y flujo del programa
+├── servicios.py    # Lógica del inventario (agregar, buscar, actualizar, eliminar, estadísticas)
+├── archivos.py     # Lectura y escritura de archivos CSV
+└── README.md       # Documentación del proyecto
 
-## 🛠️ Instalación y Uso
-1. Clona el repositorio o descarga los archivos.
-2. Asegúrate de tener Python 3 instalado.
-3. Ejecuta el programa principal:
-   ```bash
-   python app.py
+Cómo ejecutar
+bashpython app.py
+
+Si no funciona, prueba con python3 app.py
+
+
+Funcionalidades
+OpciónDescripción1Agregar un nuevo producto2Mostrar todos los productos3Buscar un producto por nombre4Actualizar precio y cantidad de un producto5Eliminar un producto6Ver estadísticas del inventario7Guardar inventario en CSV8Cargar inventario desde CSV9Salir
+
+Ejemplo de uso
+
+Ejecutar el programa con python app.py
+Seleccionar opción 1 para agregar un producto
+Ingresar nombre, precio y cantidad
+Seleccionar opción 2 para ver el inventario
+Seleccionar opción 7 para guardar los datos en inventario.csv
+Al salir con opción 9, el programa pregunta si desea guardar cambios pendientes
+
+
+Validaciones
+
+Precio y cantidad deben ser valores numéricos mayores a 0
+Solo se permiten archivos con extensión .csv al cargar datos
+Al salir, si hay cambios sin guardar el programa lo notifica
+
+
+Archivos generados
+Al guardar el inventario se crea el archivo inventario.csv en la misma carpeta del proyecto con el siguiente formato:
+nombre,precio,cantidad
+Manzana,1.5,10
+Pera,2.0,5
+
+Autor
+Dylan Castillo
