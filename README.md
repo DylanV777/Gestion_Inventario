@@ -1,5 +1,5 @@
 python app.py
-```
+
 
 > Si no funciona, prueba con `python3 app.py`
 
@@ -43,7 +43,7 @@ python app.py
 ## Archivos generados
 
 Al guardar el inventario se crea el archivo `inventario.csv` en la misma carpeta del proyecto con el siguiente formato:
-```
+
 nombre,precio,cantidad
 Manzana,1.5,10
 Pera,2.0,5
